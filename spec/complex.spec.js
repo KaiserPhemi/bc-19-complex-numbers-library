@@ -1,5 +1,7 @@
 'use strict';
 
+var Complex = require("../app/complex").Complex;
+
 describe("Solve complex numbers", function(){
 
 	describe("Case for no input", function(){
@@ -7,7 +9,6 @@ describe("Solve complex numbers", function(){
 		it("should return 0 for no input",function(){
 			expect(Complex()).toBe(0);
 		});
-
 	});
 
 	describe("Case for numeric input", function(){
@@ -16,6 +17,4 @@ describe("Solve complex numbers", function(){
 			expect(Complex(3)).toBe(0);
 		});
 	});
-
-
 });
