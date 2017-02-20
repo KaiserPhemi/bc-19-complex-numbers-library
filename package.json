@@ -1,0 +1,19 @@
+{
+  "name": "bc-19-complex-numbers-library",
+  "version": "1.0.0",
+  "description": "A Javascript library to solve complex numbers",
+  "main": "app/complex.js",
+  "scripts": {
+    "test": "jasmine-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaiserPhemi/bc-19-complex-numbers-library.git"
+  },
+  "author": "Oluwafemi Akinwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library/issues"
+  },
+  "homepage": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library#readme"
+}
