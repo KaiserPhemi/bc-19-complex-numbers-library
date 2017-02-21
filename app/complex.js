@@ -12,19 +12,19 @@ function Complex(real, imaginary){
 /*Method for addition of complex numbers*/
 Complex.add = function(arg1, arg2){
 	
-	return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis);
+	return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis).toString();
 };
 
 /*Method for subtraction of complex numbers*/
 Complex.subtract = function(arg1, arg2){
 
-	return new Complex((arg1.xAxis-arg2.xAxis), (arg1.yAxis-arg2.yAxis));
+	return new Complex((arg1.xAxis-arg2.xAxis), (arg1.yAxis-arg2.yAxis)).toString();
 };
 
 /*Method to multiply two complex numbers*/
 Complex.multiply = function(arg1, arg2){
 
-	return new Complex( (arg1.xAxis * arg2.xAxis) - (arg1.yAxis * arg2.yAxis), (arg1.xAxis * arg2.yAxis) + (arg1.yAxis * arg2.xAxis) );
+	return new Complex( (arg1.xAxis * arg2.xAxis) - (arg1.yAxis * arg2.yAxis), (arg1.xAxis * arg2.yAxis) + (arg1.yAxis * arg2.xAxis) ).toString();
 };
 
 /*Method for division of complex numbers*/
@@ -43,7 +43,7 @@ Complex.conjugate = function(args){
 /*This converts the output to string*/
 Complex.prototype.toString = function() {
 
-	return "{" + this.xAxis + "," + this.yAxis + "i}";
+	return "{" + this.xAxis + ", " + this.yAxis + "i}";
 };
 
 module.exports = Complex;
