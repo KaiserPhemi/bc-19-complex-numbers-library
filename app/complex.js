@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 'use strict';
 
 function Complex(real, imaginary){
@@ -10,41 +9,34 @@ function Complex(real, imaginary){
 }
 
 /*Method for addition of complex numbers*/
-Complex.add = function(){
+Complex.add = function(operandA, operandB){
 
-	var result = new Complex();
-
-	for(var count = 0; count < arguments.length; count++){
-		result += Complex( (arguments[count].xAxis+arguments[count+1].xAxis), (arguments[count].yAxis+arguments[count+1].yAxis));
-	}
-	
-	/*return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis).toString();*/
-	return result.toString();
+	return new Complex( (operandA.xAxis+operandB.xAxis), (operandA.yAxis+operandB.yAxis) ).toString();
 };
 
 /*Method for subtraction of complex numbers*/
-Complex.subtract = function(arg1, arg2){
+Complex.subtract = function(operandA, operandB){
 
-	return new Complex((arg1.xAxis-arg2.xAxis), (arg1.yAxis-arg2.yAxis)).toString();
+	return new Complex( (operandA.xAxis-operandB.xAxis), (operandA.yAxis-operandB.yAxis) ).toString();
 };
 
 /*Method to multiply two complex numbers*/
-Complex.multiply = function(arg1, arg2){
+Complex.multiply = function(operandA, operandB){
 
-	return new Complex( (arg1.xAxis * arg2.xAxis) - (arg1.yAxis * arg2.yAxis), (arg1.xAxis * arg2.yAxis) + (arg1.yAxis * arg2.xAxis) ).toString();
+	return new Complex( (operandA.xAxis * operandB.xAxis) - (operandA.yAxis * operandB.yAxis), (operandA.xAxis * operandB.yAxis) + (operandA.yAxis * operandB.xAxis) ).toString();
 };
 
 /*Method for division of complex numbers*/
-Complex.divide = function(arg1, arg2){
+Complex.divide = function(operandA, operandB){
 
-	var divisor = Math.pow(arg2.xAxis, 2) + Math.pow(arg2.yAxis, 2);
-	return new Complex( ((arg1.xAxis*arg2.xAxis) + (arg1.yAxis*arg2.yAxis))/divisor, ((arg1.yAxis*arg2.xAxis) - (arg1.xAxis*arg2.yAxis))/divisor ).toString();
+	var divisor = Math.pow(operandB.xAxis, 2) + Math.pow(operandB.yAxis, 2);
+	return new Complex( ((operandA.xAxis*operandB.xAxis) + (operandA.yAxis*operandB.yAxis))/divisor, ((operandA.yAxis*operandB.xAxis) - (operandA.xAxis*operandB.yAxis))/divisor ).toString();
 };
 
 /*Method to find the conugate of a complex number*/
 Complex.conjugate = function(args){
 	
-	return new Complex(args.xAxis, -args.yAxis);
+	return new Complex(args.xAxis, -args.yAxis).toString();
 };
 
 /*This converts the output to string*/

@@ -13,7 +13,7 @@
   "author": "Oluwafemi Akinwa",
   "license": "MIT",
   "bin":{
-    "Complex":"app/complex.js"
+    "complexnum":"app/complex.js"
   },
   "bugs": {
     "url": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library/issues"
