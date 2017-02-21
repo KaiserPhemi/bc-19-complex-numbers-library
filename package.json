@@ -12,8 +12,18 @@
   },
   "author": "Oluwafemi Akinwa",
   "license": "MIT",
+  "bin":{
+    "Complex":"app/complex.js"
+  },
   "bugs": {
     "url": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library/issues"
   },
-  "homepage": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library#readme"
+  "homepage": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "commander": "^2.9.0",
+    "figlet": "^1.2.0",
+    "mathjs": "^3.9.2"
+  }
 }
