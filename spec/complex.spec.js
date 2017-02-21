@@ -12,27 +12,4 @@ describe("Solve complex numbers", function(){
 			expect(Complex.addittion(arg1, arg2)).toBe(8, 6);
 		});
 	});
-/*
-	describe("Cases for multiplication of complex numbers",function(){
-
-		it("should return ",function(){
-
-		});
-	});
-
-	describe("Cases for division of complex numbers",function(){
-
-		it("",function(){
-
-		});
-	});
-
-	describe("Cases for subtraction of complex numbers",function(){
-
-		it("",function(){
-
-		});
-
-	});
-*/
 });

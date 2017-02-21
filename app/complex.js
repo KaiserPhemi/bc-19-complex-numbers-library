@@ -1,37 +1,49 @@
 #!/usr/bin/env node
-(function(){
+
+'use strict';
+
+function Complex(real, imaginary){
+
+	/*Checks if real and imaginary parts exist*/
+	this.xAxis = (real == null)? 0 : parseFloat(real);
+	this.yAxis = (imaginary == null)? 0 : parseFloat(imaginary);
+}
+
+/*Method for addition of complex numbers*/
+Complex.add = function(arg1, arg2){
 	
-	'use strict';
+	return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis);
+};
 
-	function Complex(real, imaginary){
+/*Method for subtraction of complex numbers*/
+Complex.subtract = function(arg1, arg2){
 
-		/*Checks if real and imaginary parts exist*/
-		this.xAxis = (real == null)? 0 : parseFloat(real);
-		this.yAxis = (imaginary == null)? 0 : parseFloat(imaginary);
-	}
+	return new Complex((arg1.xAxis-arg2.xAxis), (arg1.yAxis-arg2.yAxis));
+};
 
-	Complex = {
+/*Method to multiply two complex numbers*/
+Complex.multiply = function(arg1, arg2){
 
-		addition:function(){
+	return new Complex( (arg1.xAxis * arg2.xAxis) - (arg1.yAxis * arg2.yAxis), (arg1.xAxis * arg2.yAxis) + (arg1.yAxis * arg2.xAxis) );
+};
 
-			for(var count = 0; count < arguments.length; count++){
+/*Method for division of complex numbers*/
+Complex.divide = function(arg1, arg2){
 
-				return new Complex((arguments[count].xAxis+arguments[count+1].xAxis), (arguments[count].yAxis+arguments[count+1].yAxis));
-			}
-		},
-		subtraction:function(complexArg1, complexArg2){
+	var divisor = Math.pow(arg2.xAxis, 2) + Math.pow(arg2.yAxis, 2);
+	return new Complex( ((arg1.xAxis*arg2.xAxis) + (arg1.yAxis*arg2.yAxis))/divisor, ((arg1.yAxis*arg2.xAxis) - (arg1.xAxis*arg2.yAxis))/divisor ).toString();
+};
 
-			return new Complex((complexArg1.xAxis-complexArg2.xAxis), (complexArg1.yAxis-complexArg2.yAxis));
-		},
-		multiplication:function(){},
-		division:function(){},
-		conjugate:function(){
+/*Method to find the conugate of a complex number*/
+Complex.conjugate = function(args){
+	
+	return new Complex(args.xAxis, -args.yAxis);
+};
 
-			return new Complex(this.xAxis, -this.yAxis);
-		}
+/*This converts the output to string*/
+Complex.prototype.toString = function() {
 
-		
-	};
+	return "{" + this.xAxis + "," + this.yAxis + "i}";
+};
 
-	module.exports = Complex;
-})();
+module.exports = Complex;
