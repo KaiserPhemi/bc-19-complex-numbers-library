@@ -50,4 +50,13 @@ describe("Solve complex numbers", function(){
 			expect(Complex.divide(arg1, arg2)).toBe('{-0.3, 1.4i}');
 		});
 	});
+
+	describe("Case for conjugate of complex numbers", function(){
+
+		it("should return `{3, -2i}` for conjugate of `(3 + 2i)`", function(){
+			var args = new Complex(3, -2);
+			expect(Complex.conjugate(args)).toBe('{3, -2i}');	
+		});
+		
+	});
 });

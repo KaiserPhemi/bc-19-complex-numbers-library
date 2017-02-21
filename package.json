@@ -1,5 +1,5 @@
 {
-  "name": "bc-19-complex-numbers-library",
+  "name": "complexnum",
   "version": "1.0.0",
   "description": "A Javascript library to solve complex numbers",
   "main": "app/complex.js",

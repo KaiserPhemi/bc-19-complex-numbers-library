@@ -10,9 +10,16 @@ function Complex(real, imaginary){
 }
 
 /*Method for addition of complex numbers*/
-Complex.add = function(arg1, arg2){
+Complex.add = function(){
+
+	var result = new Complex();
+
+	for(var count = 0; count < arguments.length; count++){
+		result += Complex( (arguments[count].xAxis+arguments[count+1].xAxis), (arguments[count].yAxis+arguments[count+1].yAxis));
+	}
 	
-	return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis).toString();
+	/*return new Complex(arg1.xAxis+arg2.xAxis, arg1.yAxis+arg2.yAxis).toString();*/
+	return result.toString();
 };
 
 /*Method for subtraction of complex numbers*/
