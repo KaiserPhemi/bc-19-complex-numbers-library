@@ -36,14 +36,9 @@ describe("Solve complex numbers", function(){
 
 	describe("Case for zero real or zero imaginary", function(){
 
-		it("should return `{1}` for (1 + 0i)", function(){
+		it("should return `{1, 0i}` for (1 + 0i)", function(){
 			var args = new Complex(1, 0).toString();
-			expect(args).toBe('{1}');
-		});
-
-		it("should return `{i}` for (0 + i)", function(){
-			var args = new Complex(0, 1).toString();
-			expect(args).toBe('{i}');
+			expect(args).toBe('{1, 0i}');
 		});
 	});
 
