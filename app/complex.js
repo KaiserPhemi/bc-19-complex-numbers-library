@@ -46,6 +46,4 @@
 
 		return "{" + this.xAxis + ", " + this.yAxis + "i}";
 	};
-
-	
 })();
