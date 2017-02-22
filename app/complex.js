@@ -46,8 +46,10 @@
 
 		/*Checks for all cases of zero real or imaginary parts*/
 		var strOutput = (this.xAxis == 0 && this.yAxis == 1)? "{" + "i}":
+						(this.xAxis == 0 && this.yAxis == -1)? "{" + "-i}":
 						(this.xAxis == 0 && this.yAxis > 1)? "{" + this.yAxis + "i}":
 						(this.xAxis == 1 && this.yAxis == 0)? "{" + 1 + "}":
+						(this.xAxis == -1 && this.yAxis == 0)? "{" + "i}":
 						(this.xAxis > 1 && this.yAxis == 0) ? "{" + this.xAxis + "}": "{" + this.xAxis + ", " + this.yAxis + "i}";
 		return strOutput;
 	};

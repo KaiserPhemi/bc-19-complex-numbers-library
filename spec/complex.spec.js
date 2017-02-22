@@ -46,6 +46,11 @@
 				var args = new Complex(0, 1).toString();
 				expect(args).toBe('{i}');
 			});
+
+			it("should return `{-i}` for (0 - i)", function(){
+				var args = new Complex(0, -1).toString();
+				expect(args).toBe('{-i}');
+			});
 		});
 
 		describe("Case for division of complex numbers", function(){
