@@ -11,14 +11,8 @@
 	}
 
 	/*Method for adding complex numbers*/
-	Complex.add = function(){
-		if (arguments.length == 0){
-			return "At least one complex number input is required";
-		}
-		else{
-
-		}
-
+	Complex.add = function(operandA, operandB){
+		
 		return new Complex( (operandA.xAxis+operandB.xAxis), (operandA.yAxis+operandB.yAxis) ).toString();
 	};
 
