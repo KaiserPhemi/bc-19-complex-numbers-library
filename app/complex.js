@@ -4,8 +4,8 @@
 function Complex(real, imaginary){
 
 	/*Checks if real and imaginary parts exist*/
-	this.xAxis = (real == null)? 0 : parseFloat(real);
-	this.yAxis = (imaginary == null)? 0 : parseFloat(imaginary);
+	this.xAxis = (typeof real === 'undefined')? 0 : parseFloat(real);
+	this.yAxis = (typeof imaginary === 'undefined')? 0 : parseFloat(imaginary);
 }
 
 /*Method for addition of complex numbers*/
