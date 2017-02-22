@@ -5,7 +5,7 @@
 
 	function Complex(real, imaginary){
 
-		/*Checks if real and imaginary parts exist*/
+		/*Checks numeric and non-numeric parts*/
 		this.xAxis = (typeof real === 'undefined')? 0 : parseFloat(real);
 		this.yAxis = (typeof imaginary === 'undefined')? 0 : parseFloat(imaginary);
 	}
