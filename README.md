@@ -32,7 +32,7 @@ Output should be `{6, 8i}`
 
 ## Test
 
-	`npm test`
+	npm test
 
 ## Contributing
 Contributions encouraged but please take note to adhere to existing coding style. Unit tests can be added for any new or changed functionality
