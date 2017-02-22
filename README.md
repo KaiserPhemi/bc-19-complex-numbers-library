@@ -10,10 +10,9 @@
 	* Return the conjugate of a complex number.
 
 ## Dependencies
-* As a command line app, a few dependencies are required to improve the interface.
-* Though these aren't required for the app's functionality, they add to the overall user experience.
-	* **[chalk](https://www.npmjs.com/package/chalk)**- Terminal string styling.
-	* **[figlet](https://www.npmjs.com/package/figlet)** - Creates ASCII Art from text.
+* This is a library thus, requires minimal dependencies.
+* For testing purposes the following would be required
+	* **[jasmine-node](https://www.npmjs.com/package/jasmine-node)**-Simple JavaScript BDD testing framework for Node.
 
 
 ## Installation
@@ -23,6 +22,17 @@
 
 ## Usage
 
-	`var complexSolver = require("complexnum")`;
+	var yourObject = require("complexnum");
+	var arg1 = new yourObject(2, 3),
+		arg2 = new yourObject(4, 5);
+	
+	console.log(yourObject.add(arg1, arg2));
 
+Output should be `{6, 8i}`
 
+## Test
+
+	`npm test`
+
+## Contributing
+Contributions encouraged but please take note to adhere to existing coding style. Unit tests can be added for any new or changed functionality
