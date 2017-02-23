@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 (function(){
 	'use strict';
 
@@ -9,7 +8,7 @@
 		chalk	= require('chalk'),
 		readInput = require('readline-sync');
 
-	/*Clears console and prints app description and menu to screen*/
+	/*Clears console and prints app description to screen*/
 	clear();
 	console.log(chalk.white.bold(figlet.textSync('complexnum', {font:'Banner', horizontalLayout: 'full' })));
 	console.log(chalk.white.bgMagenta.bold("A console app that performs basic arithmetic operation on complex numbers."));
@@ -77,7 +76,8 @@
 					console.log(chalk.green.bold("Conjugate of complex number "+compNumArray[0]+"  is "+mainResult+"\n"));
 				break;
 
-				default:					
+				default:
+					console.log(chalk.red("User input must be a number between 0 and 5."));					;
 				break;
 			}
 		break;
