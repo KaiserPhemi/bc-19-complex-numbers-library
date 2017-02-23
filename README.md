@@ -12,8 +12,15 @@
 
 ## Dependencies
 * This is a library thus, requires minimal dependencies.
+
 * For testing purposes the following would be required
 	* **[jasmine-node](https://www.npmjs.com/package/jasmine-node)**-Simple JavaScript BDD testing framework for Node.
+	
+* For the console app, the following would be required
+	* **[figlet](https://www.npmjs.com/package/figlet)**-Creates ASCII Art from text.
+	* **[chalk](https://www.npmjs.com/package/chalk)**- String styling for the terminal.
+	* **[readline-sync](https://www.npmjs.com/package/readline-sync)**- Synchronously read users terminal input.
+	* **[clear](https://www.npmjs.com/package/clear)**- Clears the terminal screen.
 
 
 ## Installation
