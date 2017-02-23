@@ -18,12 +18,12 @@
 	var getUserChoice = function(){
 
 		/*Display menu*/
-		console.log(chalk.black.bgWhite.bold("1 : Add complex numbers.\n"));
-		console.log(chalk.black.bgWhite.bold("2 : Subtract complex numbers.\n"));
-		console.log(chalk.black.bgWhite.bold("3 : Multiply complex numbers.\n"));
-		console.log(chalk.black.bgWhite.bold("4 : Perform division with two complex numbers.\n"));
-		console.log(chalk.black.bgWhite.bold("5 : Get the conjugate of a complex number.\n"));
-		console.log(chalk.black.bgWhite.bold("0 : Exit the console app\n"));
+		console.log(chalk.blue.bold("1 : Add complex numbers.\n"));
+		console.log(chalk.blue.bold("2 : Subtract complex numbers.\n"));
+		console.log(chalk.blue.bold("3 : Multiply complex numbers.\n"));
+		console.log(chalk.blue.bold("4 : Perform division with two complex numbers.\n"));
+		console.log(chalk.blue.bold("5 : Get the conjugate of a complex number.\n"));
+		console.log(chalk.blue.bold("0 : Exit the console app\n"));
 		var option = readInput.question(chalk.magenta.bold("Your input: "));
 		return option;
 	};
@@ -31,7 +31,7 @@
 	/*Evaluates user's choice*/
 	var evaluateOption = function(input){
 
-		while(Math.abs(input) != 0 && Math.abs(input) < 6){
+		while(Math.abs(input) >= 0 && Math.abs(input) < 6){
 
 			var mainResult,
 				compNumArray;
@@ -51,7 +51,6 @@
 					compNumArray = getComplexNum();
 					mainResult = mainApp.subtract(compNumArray[0], compNumArray[1]);
 					console.log(chalk.green.bold("Complex numbers "+compNumArray[0]+" minus complex number "+compNumArray[1]+" gives "+ mainResult+"\n"));
-
 				break;
 
 				case "3":
@@ -59,7 +58,6 @@
 					compNumArray = getComplexNum();
 					mainResult = mainApp.multiply(compNumArray[0], compNumArray[1]);
 					console.log(chalk.green.bold("Complex numbers "+compNumArray[0]+" multiply by complex number "+compNumArray[1]+" gives "+ mainResult+"\n"));
-
 				break;
 
 				case "4":
@@ -76,21 +74,19 @@
 					console.log(chalk.green.bold("Conjugate of complex number "+compNumArray[0]+"  is "+mainResult+"\n"));
 				break;
 
+				case "0":
+					console.log(chalk.magenta.bold("Thank you for using the console app. Good bye!!\n"));
+					var exitCode = 1;
+					process.exit(exitCode);
+				break;
+					
 				default:
-					console.log(chalk.red("User input must be a number between 0 and 5."));					;
+					console.log(chalk.red("User input must be a number between 0 and 5. Please try again."));
 				break;
 			}
 		break;
 		}
-
-		/*Handles app closure*/
-		if (input == 0){
-			console.log(chalk.magenta.bold("Thank you for using the console app. Good bye!!\n"));
-		}
-		else{
-			console.log(chalk.blue.bold("Press 0 to exit app or select another option\n"));
-			setTimeout(getUserChoice, 5000);
-		}
+		return evaluateOption(getUserChoice());
 	};
 
 	/*Get's complex number inputs from user*/
@@ -101,8 +97,10 @@
 			firstImag 	= readInput.question(chalk.white.bold("Enter the imaginary part of first complex num: \n")),
 			secondReal 	= readInput.question(chalk.white.bold("Enter the real part of second complex num: \n")),
 			secondImag	= readInput.question(chalk.white.bold("Enter the imaginary part of second complex num: \n")),
-			firstCom 	= new mainApp(firstReal, firstImag),
-			secondCom	= new mainApp(secondReal, secondImag);
+			firstCom 	= (typeof firstReal === "undefined")? new mainApp(0, firstImag):
+						  (typeof firstImag === "undefined")? new mainApp(firstReal, 0): new mainApp(firstReal, firstImag),
+			secondCom	= (typeof secondReal === "undefined")? new mainApp(0, secondImag):
+						  (typeof secondImag === "undefined")? new mainApp(secondReal, 0): new mainApp(secondReal, secondImag);
 		return [firstCom, secondCom];
 	};
 
@@ -114,5 +112,7 @@
 			complexNum 	= new mainApp(real, imaginary);
 		return [complexNum];
 	};	
+	
+	/*Starts application*/
 	evaluateOption(getUserChoice());
 })();
