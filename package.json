@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/KaiserPhemi/bc-19-complex-numbers-library#readme",
   "dependencies": {
+    "coveralls": "^2.11.16",
     "jasmine-node": "^1.14.5"
   }
 }
