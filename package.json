@@ -4,7 +4,8 @@
   "description": "A Javascript library to solve complex numbers",
   "main": "app/complex.js",
   "scripts": {
-    "test": "jasmine-node spec/"
+    "test": "jasmine-node spec/",
+    
   },
   "repository": {
     "type": "git",
