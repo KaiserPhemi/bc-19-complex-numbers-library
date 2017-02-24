@@ -1,5 +1,6 @@
 # complexnum
 [![Build Status](https://travis-ci.org/KaiserPhemi/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/KaiserPhemi/bc-19-complex-numbers-library)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/ccf9fa49e50943cdbec61d2143977ff6/badge.svg)](https://www.quantifiedcode.com/app/project/ccf9fa49e50943cdbec61d2143977ff6)
 
 ## Introduction
 * **`complexnum`** is a Javascript complex number solving app.
