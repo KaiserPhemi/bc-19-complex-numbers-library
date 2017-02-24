@@ -17,6 +17,7 @@
 
 * For testing purposes the following would be required
 	* **[jasmine-node](https://www.npmjs.com/package/jasmine-node)**-Simple JavaScript BDD testing framework for Node.
+	* **[coveralls.io](https://www.npmjs.com/package/coveralls.io)**-Posts your coverage reports to coveralls.io.
 	
 * For the console app, the following would be required
 	* **[figlet](https://www.npmjs.com/package/figlet)**-Creates ASCII Art from text.
