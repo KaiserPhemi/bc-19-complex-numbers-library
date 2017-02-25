@@ -46,4 +46,6 @@ Output should be `{6, 8i}`
 	npm test
 
 ## Contributing
-Contributions encouraged but please take note to adhere to existing coding style. Unit tests can be added for any new or changed functionality
+Contributions encouraged but please take note to adhere to existing coding style. Unit tests can be added for any new or changed functionality.
+
+##_Thank You!_
